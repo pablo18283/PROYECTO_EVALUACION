@@ -15,8 +15,7 @@
     <nav>
         <ul>
             <li><a href="#bienvenida">Inicio</a></li>
-            <li><a href="#menu">Menú</a></li>
-            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#pedido">Haz tu Pedido</a></li>
         </ul>
     </nav>
 
@@ -60,7 +59,7 @@
                     <span class="price">$7.200</span>
                 </article>
                 <article class="menu-card">
-                    <img src="https://placehold.co/300x200" alt="Bebida Refrescante">
+                    <img src="images/LIMONADA.jpg" alt="Bebida Refrescante">
                     <h3>Bebida Refrescante</h3>
                     <p>Limonada natural con menta o té helado artesanal.</p>
                     <span class="price">$2.100</span>
@@ -68,23 +67,31 @@
             </div>
         </section>
 
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <p>Envía tu pedido o consulta y nuestro equipo te responderá lo antes posible.</p>
+        <section id="pedido">
+            <h2>Haz tu Pedido</h2>
             <form>
                 <div>
                     <label for="nombre">Nombre</label>
                     <input type="text" id="nombre" name="nombre" required>
                 </div>
                 <div>
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
+                    <label for="producto">Producto</label>
+                    <input type="text" id="producto" name="producto" placeholder="Ej: Brazo de Reina" required>
                 </div>
                 <div>
-                    <label for="mensaje">Mensaje</label>
-                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                    <label for="cantidad">Cantidad</label>
+                    <input type="number" id="cantidad" name="cantidad" min="1" value="1" required>
                 </div>
-                <button type="submit">Enviar</button>
+                <div>
+                    <label for="pago">Forma de Pago</label>
+                    <select id="pago" name="pago" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="debito">Débito</option>
+                        <option value="credito">Crédito</option>
+                        <option value="transferencia">Transferencia</option>
+                    </select>
+                </div>
+                <button type="submit">Confirmar Pedido</button>
             </form>
         </section>
     </main>
