@@ -1,16 +1,15 @@
-# Sitio Web Estático - HTML5 y CSS3
+# Sabor Express
 
 ## Descripción del Proyecto
 
-Este proyecto es un sitio web estático moderno construido con **HTML5 semántico** y **CSS3 avanzado**. Implementa un diseño oscuro profesional con tema corporativo, utilizando **Flexbox** para un layout responsivo y bien estructurado.
+Sabor Express es un sitio web estático para un negocio de venta de comida rápida y para llevar. El proyecto utiliza **HTML5 semántico** combinado con **CSS3 moderno** y **Flexbox** para lograr un diseño limpio, ordenado y adaptable.
 
-### Características principales:
-- ✅ HTML5 con etiquetas semánticas
-- ✅ Diseño responsive con Flexbox
-- ✅ Tema oscuro moderno (#2c3e50)
-- ✅ Formulario de contacto funcional
-- ✅ Navegación intuitiva
-- ✅ Estilos CSS3 con transiciones y efectos hover
+Este sitio incluye:
+- Página de bienvenida con presentación de la marca
+- Menú con 6 tarjetas de comida que muestran imagen, nombre, descripción y precio
+- Formulario de contacto para pedidos o consultas
+- Navegación clara con enlaces internos
+- Estilo cálido con colores naranja y blanco
 
 ---
 
@@ -19,149 +18,106 @@ Este proyecto es un sitio web estático moderno construido con **HTML5 semántic
 ```
 PROYECTO_EVALUACION/
 │
-├── index.html                 # Página principal (HTML5 semántico)
-├── README.md                  # Este archivo
+├── index.html                 # Página principal del sitio Sabor Express
+├── README.md                  # Documentación del proyecto
 │
 ├── css/
-│   └── styles.css            # Estilos CSS3 (Flexbox, diseño oscuro)
+│   └── styles.css             # Estilos CSS3 con Flexbox y diseño cálido
 │
-└── images/                    # Carpeta para imágenes del proyecto
+└── images/                    # Carpeta para imágenes del menú y el sitio
     └── (imágenes aquí)
 ```
 
-### Descripción de archivos:
+### Descripción de archivos
 
-- **index.html**: Archivo HTML principal con estructura semántica incluyendo:
-  - Header con título
-  - Navegación con 3 enlaces
-  - Main con 2 sections (información e imagen, formulario de contacto)
-  - Footer con copyright
-
-- **css/styles.css**: Archivo de estilos CSS3 que incluye:
-  - Flexbox en nav, main y formulario
-  - Diseño oscuro con color #2c3e50
-  - Tipografía Arial
-  - Efectos hover y transiciones
-  - Responsividad
-
-- **images/**: Carpeta destinada a almacenar todas las imágenes del sitio
+- **index.html**: Contiene la estructura semántica del sitio con `header`, `nav`, `main`, `section` y `footer`.
+- **css/styles.css**: Define el diseño visual del sitio, usando Flexbox para la navegación, el menú y el formulario.
+- **images/**: Carpeta de apoyo para imágenes locales si se desea reemplazar los marcadores de posición.
 
 ---
 
-## Cómo Usar
+## Prompts utilizados
 
-1. **Clonar o descargar** el proyecto
-2. **Abrir `index.html`** en un navegador web
-3. **Personalizar** contenido y estilos según necesidades
-
-### Requisitos:
-- Navegador web moderno (Chrome, Firefox, Safari, Edge)
-- No requiere instalación de dependencias
-
----
-
-## Prompts Utilizados
-
-### 1️⃣ Prompt: Crear HTML5 Semántico Estructurado
+### 1️⃣ Prompt: Crear página principal para Sabor Express
 
 **Solicitud:**
 ```
-Crea un archivo index.html con HTML5 semántico que incluya: header con título, nav con 3 enlaces, 
-main con 2 sections (una con texto e imagen, otra con formulario de contacto con nombre email y mensaje), 
-y footer. Enlaza un archivo css/styles.css externo.
+Crea un index.html completo para un sitio web de venta de comida llamado "Sabor Express". Debe usar HTML5 semántico obligatoriamente con las etiquetas: header, nav, main, section y footer. Incluir: nav con mínimo 3 enlaces, sección de bienvenida, sección de menú con 6 tarjetas de comida cada una con imagen (usa https://placehold.co/300x200), nombre del plato, descripción y precio, sección de contacto con formulario que tenga nombre, email y mensaje. Enlazar archivo externo css/styles.css.
 ```
 
-**Propósito:** 
-Este prompt se utilizó para generar la estructura base del proyecto con elementos semánticos HTML5. Permitió crear una página web con una arquitectura clara y accesible, siguiendo las mejores prácticas de HTML moderno.
-
-**Resultado:**
-- Creación de index.html con estructura completa y semántica
-- Inclusión de formulario de contacto con validación de campos
-- Enlaces organizados en navegación clara
-- Integración con archivo CSS externo
+**Para qué se usó:**
+Generar la estructura completa de la página y asegurar la inclusión de todos los bloques obligatorios para el sitio de comida.
 
 ---
 
-### 2️⃣ Prompt: Diseño Oscuro con Flexbox Avanzado
+### 2️⃣ Prompt: Crear estilos cálidos para Sabor Express
 
 **Solicitud:**
 ```
-Crea el archivo css/styles.css para el index.html anterior. Usa Flexbox en el nav (justify-content center, gap), 
-en el main (flex-direction column, align-items center) y en el formulario (flex-direction column). Diseño oscuro 
-con color #2c3e50, tipografía Arial, estilos para header, nav, main, section, form, inputs, button y footer.
+Crea css/styles.css para "Sabor Express". Requisitos obligatorios: usar Flexbox en nav, en las tarjetas del menú (3 columnas, flex-wrap) y en el formulario. Colores cálidos naranja #e67e22 y blanco. Estilos para header, nav, main, todas las sections, tarjetas con sombra y borde redondeado, imágenes responsivas, formulario completo y footer. Diseño ordenado y coherente.
 ```
 
-**Propósito:**
-Este prompt fue usado para implementar estilos CSS3 profesionales con Flexbox. Permitió crear un diseño moderno, 
-responsivo y visualmente atractivo con tema oscuro corporativo.
-
-**Resultado:**
-- Implementación de Flexbox en componentes clave (nav, main, formulario)
-- Diseño oscuro cohesivo con paleta de colores profesionales
-- Tipografía Arial consistente en todo el sitio
-- Efectos hover, transiciones y estilos para inputs interactivos
-- Sombras y bordes redondeados modernos
+**Para qué se usó:**
+Implementar el estilo visual del proyecto con una paleta cromática cálida y un layout responsivo basado en Flexbox.
 
 ---
 
-### 3️⃣ Prompt: Crear Documentación del Proyecto
+### 3️⃣ Prompt: Documentar el proyecto en README.md
 
 **Solicitud:**
 ```
-Crea un archivo README.md para un proyecto de sitio web estático con HTML5 y CSS3. Incluye: descripción del proyecto, 
-estructura de carpetas (index.html, css/styles.css, images/), y una sección llamada "Prompts utilizados" 
-con 3 prompts de ejemplo explicando para qué se usó cada uno.
+Crea un README.md para el proyecto "Sabor Express". Debe incluir: descripción del proyecto, estructura de carpetas del proyecto, y una sección "Prompts utilizados" listando mínimo 5 prompts con su explicación de para qué se usó cada uno.
 ```
 
-**Propósito:**
-Este prompt se utilizó para crear documentación completa del proyecto. Facilita la comprensión de la estructura, 
-propósito y componentes del sitio web para desarrolladores presentes y futuros.
-
-**Resultado:**
-- Documentación clara y profesional en formato Markdown
-- Descripción detallada de la estructura de carpetas
-- Registro de prompts utilizados con explicaciones
-- Instrucciones de uso y requisitos del proyecto
+**Para qué se usó:**
+Generar el contenido de documentación del proyecto, describir su estructura y registrar los prompts realizados durante el desarrollo.
 
 ---
 
-## Personalización
+### 4️⃣ Prompt: Agregar sección de bienvenida con copy atractivo
 
-### Cambiar colores:
-Edita `css/styles.css` y modifica las variables de color:
-```css
-background-color: #2c3e50;  /* Color de fondo oscuro */
-color: #3498db;             /* Color de acentos */
+**Solicitud:**
+```
+Escribe un texto breve para la sección de bienvenida de Sabor Express que invite a probar comida rápida y fresca.
 ```
 
-### Agregar nuevas secciones:
-Añade nuevos elementos `<section>` en `index.html` dentro de `<main>` y aplica los estilos existentes.
-
-### Optimización de imágenes:
-Coloca imágenes en la carpeta `images/` y referéncialas en el HTML:
-```html
-<img src="images/foto.jpg" alt="Descripción">
-```
+**Para qué se usó:**
+Crear un mensaje inicial claro y atractivo para la página, que explique el valor del servicio y conecte con el cliente.
 
 ---
 
-## Navegadores Soportados
+### 5️⃣ Prompt: Diseñar tarjetas de menú con imagen y precio
 
-- ✅ Chrome (v90+)
-- ✅ Firefox (v88+)
-- ✅ Safari (v14+)
-- ✅ Edge (v90+)
+**Solicitud:**
+```
+Genera 6 tarjetas de menú para un sitio de comida rápida. Cada tarjeta debe tener una imagen placeholder, nombre del plato, descripción breve y precio.
+```
+
+**Para qué se usó:**
+Crear el contenido de los platos del menú y asegurar que cada tarjeta tenga estructura uniforme y datos relevantes.
 
 ---
 
-## Licencia
+## Cómo usar el proyecto
 
-Este proyecto está disponible para uso libre y personal.
+1. Clona o descarga el repositorio.
+2. Abre `index.html` en un navegador moderno.
+3. Personaliza los textos, precios e imágenes según tu negocio.
+4. Si quieres usar imágenes reales, coloca los archivos en `images/` y actualiza las rutas.
+
+---
+
+## Navegadores compatibles
+
+- Chrome
+- Firefox
+- Edge
+- Safari
 
 ---
 
 ## Autor
 
-Proyecto creado con asistencia de GitHub Copilot
+Sabor Express - Proyecto creado con asistencia de GitHub Copilot
 
 **Fecha:** Abril 2026

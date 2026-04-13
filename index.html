@@ -3,59 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sitio Web</title>
+    <title>Sabor Express</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
-        <h1>Bienvenido a Mi Sitio Web</h1>
-        <p>Versión mejorada con estructura optimizada</p>
+        <h1>Sabor Express</h1>
+        <p>Comida deliciosa, rápida y siempre lista para llevar.</p>
     </header>
 
     <nav>
         <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#bienvenida">Inicio</a></li>
+            <li><a href="#menu">Menú</a></li>
             <li><a href="#contacto">Contacto</a></li>
         </ul>
     </nav>
 
     <main>
-        <section id="inicio">
-            <h2>Sobre Nosotros</h2>
-            <p>
-                Este es un sitio web de ejemplo con una estructura HTML5 semántica. 
-                Aquí puedes encontrar información relevante sobre nuestros servicios 
-                y cómo contactarnos para más detalles.
-            </p>
-            <img src="https://via.placeholder.com/300" alt="Imagen descriptiva">
+        <section id="bienvenida">
+            <h2>Bienvenido a Sabor Express</h2>
+            <p>Descubre platos con ingredientes frescos y tiempo de entrega rápido, diseñados para satisfacer tu antojo al instante.</p>
+        </section>
+
+        <section id="menu">
+            <h2>Menú Especial</h2>
+            <div class="menu-grid">
+                <article class="menu-card">
+                    <img src="images/BRAZO_DE_REINA.jpg" alt="Brazo de Reina">
+                    <h3>Brazo de Reina</h3>
+                    <p>Clásico postre chileno relleno de manjar, merengue crujiente y cubierto de coco rallado.</p>
+                    <span class="price">$7.500</span>
+                </article>
+                <article class="menu-card">
+                    <img src="images/CHACARERO.jpg" alt="Chacarero">
+                    <h3>Chacarero</h3>
+                    <p>Tradicional sándwich chileno con carne, palta, tomate y cebolla en pan tostado.</p>
+                    <span class="price">$6.200</span>
+                </article>
+                <article class="menu-card">
+                    <img src="images/CHORRILLANA.jpg" alt="Chorrillana">
+                    <h3>Chorrillana</h3>
+                    <p>Plato icónico: papas fritas, carne picada, cebolla, huevo y queso derretido.</p>
+                    <span class="price">$8.900</span>
+                </article>
+                <article class="menu-card">
+                    <img src="images/COMPLETO.jpg" alt="Completo">
+                    <h3>Completo</h3>
+                    <p>Sándwich tradicional con carne, palta, tomate, cebolla, mayo y mostaza.</p>
+                    <span class="price">$5.800</span>
+                </article>
+                <article class="menu-card">
+                    <img src="images/PIZZA.jpg" alt="Pizza">
+                    <h3>Pizza a la Chilena</h3>
+                    <p>Pizza casera con queso derretido, tomate fresco y orégano artesanal.</p>
+                    <span class="price">$7.200</span>
+                </article>
+                <article class="menu-card">
+                    <img src="https://placehold.co/300x200" alt="Bebida Refrescante">
+                    <h3>Bebida Refrescante</h3>
+                    <p>Limonada natural con menta o té helado artesanal.</p>
+                    <span class="price">$2.100</span>
+                </article>
+            </div>
         </section>
 
         <section id="contacto">
-            <h2>Formulario de Contacto</h2>
+            <h2>Contacto</h2>
+            <p>Envía tu pedido o consulta y nuestro equipo te responderá lo antes posible.</p>
             <form>
                 <div>
-                    <label for="nombre">Nombre:</label>
+                    <label for="nombre">Nombre</label>
                     <input type="text" id="nombre" name="nombre" required>
                 </div>
-
                 <div>
-                    <label for="email">Email:</label>
+                    <label for="email">Email</label>
                     <input type="email" id="email" name="email" required>
                 </div>
-
                 <div>
-                    <label for="mensaje">Mensaje:</label>
+                    <label for="mensaje">Mensaje</label>
                     <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
                 </div>
-
                 <button type="submit">Enviar</button>
             </form>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Mi Sitio Web. Todos los derechos reservados.</p>
+        <p>&copy; 2026 Sabor Express. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
