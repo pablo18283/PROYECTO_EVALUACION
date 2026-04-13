@@ -15,7 +15,7 @@
     <nav>
         <ul>
             <li><a href="#bienvenida">Inicio</a></li>
-            <li><a href="#pedido">Haz tu Pedido</a></li>
+            <li><a href="#menu">Haz tu Pedido</a></li>
         </ul>
     </nav>
 
@@ -28,76 +28,379 @@
         <section id="menu">
             <h2>Menú Especial</h2>
             <div class="menu-grid">
-                <article class="menu-card">
+                <article class="menu-card" data-name="Brazo de Reina" data-price="7500">
                     <img src="images/brazo_de_reina.jpg" alt="Brazo de Reina">
                     <h3>Brazo de Reina</h3>
                     <p>Clásico postre chileno relleno de manjar, merengue crujiente y cubierto de coco rallado.</p>
                     <span class="price">$7.500</span>
+                    <div class="item-controls">
+                        <button type="button" class="decrement">-</button>
+                        <span class="item-count">0</span>
+                        <button type="button" class="increment">+</button>
+                    </div>
                 </article>
-                <article class="menu-card">
+                <article class="menu-card" data-name="Chacarero" data-price="6200">
                     <img src="images/chacarero.jpg" alt="Chacarero">
                     <h3>Chacarero</h3>
                     <p>Tradicional sándwich chileno con carne, palta, tomate y cebolla en pan tostado.</p>
                     <span class="price">$6.200</span>
+                    <div class="item-controls">
+                        <button type="button" class="decrement">-</button>
+                        <span class="item-count">0</span>
+                        <button type="button" class="increment">+</button>
+                    </div>
                 </article>
-                <article class="menu-card">
+                <article class="menu-card" data-name="Chorrillana" data-price="8900">
                     <img src="images/chorrillana.jpg" alt="Chorrillana">
                     <h3>Chorrillana</h3>
                     <p>Plato icónico: papas fritas, carne picada, cebolla, huevo y queso derretido.</p>
                     <span class="price">$8.900</span>
+                    <div class="item-controls">
+                        <button type="button" class="decrement">-</button>
+                        <span class="item-count">0</span>
+                        <button type="button" class="increment">+</button>
+                    </div>
                 </article>
-                <article class="menu-card">
+                <article class="menu-card" data-name="Completo" data-price="5800">
                     <img src="images/completo.jpg" alt="Completo">
                     <h3>Completo</h3>
                     <p>Sándwich tradicional con carne, palta, tomate, cebolla, mayo y mostaza.</p>
                     <span class="price">$5.800</span>
+                    <div class="item-controls">
+                        <button type="button" class="decrement">-</button>
+                        <span class="item-count">0</span>
+                        <button type="button" class="increment">+</button>
+                    </div>
                 </article>
-                <article class="menu-card">
+                <article class="menu-card" data-name="Pizza a la Chilena" data-price="7200">
                     <img src="images/pizza.jpg" alt="Pizza">
                     <h3>Pizza a la Chilena</h3>
                     <p>Pizza casera con queso derretido, tomate fresco y orégano artesanal.</p>
                     <span class="price">$7.200</span>
+                    <div class="item-controls">
+                        <button type="button" class="decrement">-</button>
+                        <span class="item-count">0</span>
+                        <button type="button" class="increment">+</button>
+                    </div>
                 </article>
-                <article class="menu-card">
+                <article class="menu-card" data-name="Limonada" data-price="2100">
                     <img src="images/limonada.jpg" alt="Bebida Refrescante">
                     <h3>Bebida Refrescante</h3>
                     <p>Limonada natural con menta o té helado artesanal.</p>
                     <span class="price">$2.100</span>
+                    <div class="item-controls">
+                        <button type="button" class="decrement">-</button>
+                        <span class="item-count">0</span>
+                        <button type="button" class="increment">+</button>
+                    </div>
                 </article>
             </div>
-        </section>
+            <section class="order-summary" id="pedido-section">
+                <h3>Resumen del Pedido</h3>
+                <div class="summary-table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Producto</th>
+                                <th>Cantidad</th>
+                                <th>Precio unitario</th>
+                                <th>Subtotal</th>
+                            </tr>
+                        </thead>
+                        <tbody id="order-summary-body">
+                            <tr>
+                                <td colspan="4">No hay productos seleccionados.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="order-total" id="order-total">Total: $0</p>
 
-        <section id="pedido">
-            <h2>Haz tu Pedido</h2>
-            <form>
-                <div>
-                    <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" name="nombre" required>
-                </div>
-                <div>
-                    <label for="producto">Producto</label>
-                    <input type="text" id="producto" name="producto" placeholder="Ej: Brazo de Reina" required>
-                </div>
-                <div>
-                    <label for="cantidad">Cantidad</label>
-                    <input type="number" id="cantidad" name="cantidad" min="1" value="1" required>
-                </div>
-                <div>
-                    <label for="pago">Forma de Pago</label>
-                    <select id="pago" name="pago" required>
-                        <option value="">Selecciona una opción</option>
-                        <option value="debito">Débito</option>
-                        <option value="credito">Crédito</option>
-                        <option value="transferencia">Transferencia</option>
-                    </select>
-                </div>
-                <button type="submit">Confirmar Pedido</button>
-            </form>
+                <h3>Haz tu Pedido</h3>
+                <form id="pedido-form">
+                    <div>
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div>
+                        <label for="telefono">Teléfono</label>
+                        <input type="text" id="telefono" name="telefono" placeholder="+56 9 1234 5678" required>
+                    </div>
+                    <div>
+                        <label for="calle-numero">Número de calle</label>
+                        <input type="text" id="calle-numero" name="calle-numero" placeholder="123" required>
+                    </div>
+                    <div>
+                        <label for="calle">Dirección (calle)</label>
+                        <input type="text" id="calle" name="calle" placeholder="Av. Siempre Viva" required>
+                    </div>
+                    <div>
+                        <label for="comuna">Comuna</label>
+                        <select id="comuna" name="comuna" required>
+                            <option value="">Selecciona una comuna</option>
+                            <option value="Santiago">Santiago</option>
+                            <option value="Providencia">Providencia</option>
+                            <option value="Las Condes">Las Condes</option>
+                            <option value="La Florida">La Florida</option>
+                            <option value="Ñuñoa">Ñuñoa</option>
+                            <option value="Maipú">Maipú</option>
+                            <option value="Puente Alto">Puente Alto</option>
+                            <option value="La Granja">La Granja</option>
+                            <option value="Macul">Macul</option>
+                            <option value="Quilicura">Quilicura</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="payment-method">Método de pago</label>
+                        <select id="payment-method" name="payment-method" required>
+                            <option value="transferencia">Transferencia bancaria</option>
+                            <option value="tarjeta">Pago con tarjeta en domicilio</option>
+                        </select>
+                    </div>
+                    <div class="payment-details" id="transfer-details">
+                        <p>
+                            Banco: Banco Estado<br>
+                            Cuenta: 12345678<br>
+                            RUT: 12.345.678-9
+                        </p>
+                        <label for="comprobante">Subir comprobante</label>
+                        <input type="file" id="comprobante" name="comprobante" accept="image/*,application/pdf">
+                    </div>
+                    <div class="payment-details hidden" id="card-message">
+                        <p>El cobro se realizará con máquina en el momento de la entrega.</p>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" id="confirm-order">Confirmar Pedido</button>
+                        <button type="button" id="generate-pdf" class="hidden">Generar Boleta PDF</button>
+                    </div>
+                </form>
+            </section>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2026 Sabor Express. Todos los derechos reservados.</p>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const cards = document.querySelectorAll('.menu-card');
+            const summaryBody = document.getElementById('order-summary-body');
+            const totalEl = document.getElementById('order-total');
+            const nameInput = document.getElementById('nombre');
+            const phoneInput = document.getElementById('telefono');
+            const streetNumberInput = document.getElementById('calle-numero');
+            const streetNameInput = document.getElementById('calle');
+            const comunaSelect = document.getElementById('comuna');
+            const paymentMethodSelect = document.getElementById('payment-method');
+            const transferDetails = document.getElementById('transfer-details');
+            const cardMessage = document.getElementById('card-message');
+            const comprobanteInput = document.getElementById('comprobante');
+            const confirmBtn = document.getElementById('confirm-order');
+            const generateBtn = document.getElementById('generate-pdf');
+            const pedidoForm = document.getElementById('pedido-form');
+
+            function formatCurrency(value) {
+                return '$' + value.toLocaleString('es-CL');
+            }
+
+            function updateSummary() {
+                let total = 0;
+                summaryBody.innerHTML = '';
+
+                cards.forEach(card => {
+                    const countEl = card.querySelector('.item-count');
+                    const qty = Number(countEl.textContent);
+                    if (qty > 0) {
+                        const name = card.dataset.name;
+                        const price = Number(card.dataset.price);
+                        const subtotal = qty * price;
+                        total += subtotal;
+
+                        const row = document.createElement('tr');
+                        row.innerHTML = `<td>${name}</td><td>${qty}</td><td>${formatCurrency(price)}</td><td>${formatCurrency(subtotal)}</td>`;
+                        summaryBody.appendChild(row);
+                    }
+                });
+
+                if (summaryBody.children.length === 0) {
+                    const emptyRow = document.createElement('tr');
+                    emptyRow.innerHTML = '<td colspan="4">No hay productos seleccionados.</td>';
+                    summaryBody.appendChild(emptyRow);
+                }
+
+                totalEl.textContent = `Total: ${formatCurrency(total)}`;
+            }
+
+            function changeQuantity(card, delta) {
+                const countEl = card.querySelector('.item-count');
+                let count = Number(countEl.textContent) + delta;
+                if (count < 0) count = 0;
+                countEl.textContent = count;
+                updateSummary();
+            }
+
+            function updatePaymentFields() {
+                if (paymentMethodSelect.value === 'transferencia') {
+                    transferDetails.classList.remove('hidden');
+                    cardMessage.classList.add('hidden');
+                } else {
+                    transferDetails.classList.add('hidden');
+                    cardMessage.classList.remove('hidden');
+                }
+            }
+
+            function collectOrderLines() {
+                const lines = [];
+                cards.forEach(card => {
+                    const qty = Number(card.querySelector('.item-count').textContent);
+                    if (qty > 0) {
+                        const name = card.dataset.name;
+                        const price = Number(card.dataset.price);
+                        const subtotal = qty * price;
+                        lines.push({ name, qty, price, subtotal });
+                    }
+                });
+                return lines;
+            }
+
+            function validateForm(requireFile = false) {
+                const name = nameInput.value.trim();
+                const phone = phoneInput.value.trim();
+                const streetNumber = streetNumberInput.value.trim();
+                const streetName = streetNameInput.value.trim();
+                const comuna = comunaSelect.value;
+                const paymentMethod = paymentMethodSelect.value;
+
+                if (!name || !phone || !streetNumber || !streetName || !comuna) {
+                    alert('Por favor completa todos los campos de contacto y dirección.');
+                    return false;
+                }
+
+                if (paymentMethod === 'transferencia' && requireFile && comprobanteInput.files.length === 0) {
+                    alert('Por favor sube el comprobante de transferencia.');
+                    return false;
+                }
+
+                return true;
+            }
+
+            cards.forEach(card => {
+                card.querySelector('.increment').addEventListener('click', () => changeQuantity(card, 1));
+                card.querySelector('.decrement').addEventListener('click', () => changeQuantity(card, -1));
+            });
+
+            paymentMethodSelect.addEventListener('change', updatePaymentFields);
+            updatePaymentFields();
+
+            pedidoForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+            });
+
+            confirmBtn.addEventListener('click', function () {
+                updateSummary();
+                const orderLines = collectOrderLines();
+                if (orderLines.length === 0) {
+                    alert('Selecciona al menos un producto antes de confirmar el pedido.');
+                    return;
+                }
+                if (!validateForm(true)) {
+                    return;
+                }
+                generateBtn.classList.remove('hidden');
+                alert('Pedido confirmado. Ya puedes generar la boleta PDF.');
+            });
+
+            generateBtn.addEventListener('click', function () {
+                updateSummary();
+                const orderLines = collectOrderLines();
+                if (orderLines.length === 0) {
+                    alert('Selecciona al menos un producto antes de generar la boleta.');
+                    return;
+                }
+                if (!validateForm(true)) {
+                    return;
+                }
+
+                const customerName = nameInput.value.trim();
+                const customerPhone = phoneInput.value.trim();
+                const streetNumber = streetNumberInput.value.trim();
+                const streetName = streetNameInput.value.trim();
+                const comuna = comunaSelect.value;
+                const paymentMethod = paymentMethodSelect.value;
+                const paymentLabel = paymentMethod === 'transferencia' ? 'Transferencia bancaria' : 'Pago con tarjeta en domicilio';
+                const address = `${streetName}, ${streetNumber}, Comuna ${comuna}`;
+                const total = orderLines.reduce((sum, line) => sum + line.subtotal, 0);
+
+                const { jsPDF } = window.jspdf;
+                const doc = new jsPDF();
+                const now = new Date();
+                const dateStr = now.toLocaleDateString('es-CL');
+                const timeStr = now.toLocaleTimeString('es-CL', { hour: '2-digit', minute: '2-digit' });
+
+                doc.setFontSize(22);
+                doc.setTextColor('#e67e22');
+                doc.text('Sabor Express', 14, 22);
+                doc.setFontSize(12);
+                doc.setTextColor('#333333');
+                doc.text('Comida chilena a domicilio', 14, 30);
+                doc.setLineWidth(0.5);
+                doc.line(14, 36, 196, 36);
+
+                doc.setFontSize(11);
+                doc.text(`Fecha: ${dateStr}    Hora: ${timeStr}`, 14, 44);
+                doc.text(`Cliente: ${customerName}`, 14, 52);
+                doc.text(`Teléfono: ${customerPhone}`, 14, 59);
+                doc.text(`Dirección: ${address}`, 14, 66);
+                doc.text(`Método de pago: ${paymentLabel}`, 14, 73);
+
+                doc.setFontSize(13);
+                doc.text('Detalle del pedido', 14, 83);
+                let y = 91;
+
+                doc.setFontSize(11);
+                doc.text('Producto', 14, y);
+                doc.text('Cant.', 90, y);
+                doc.text('Precio', 120, y);
+                doc.text('Subtotal', 160, y);
+                y += 6;
+                doc.line(14, y, 196, y);
+                y += 6;
+
+                orderLines.forEach(line => {
+                    if (y > 270) {
+                        doc.addPage();
+                        y = 20;
+                    }
+                    doc.text(line.name, 14, y);
+                    doc.text(String(line.qty), 90, y);
+                    doc.text(formatCurrency(line.price), 120, y);
+                    doc.text(formatCurrency(line.subtotal), 160, y);
+                    y += 8;
+                });
+
+                y += 6;
+                doc.line(14, y, 196, y);
+                y += 8;
+                doc.setFontSize(14);
+                doc.setTextColor('#e67e22');
+                doc.text(`Total: ${formatCurrency(total)}`, 14, y);
+                y += 12;
+                doc.setFontSize(12);
+                doc.setTextColor('#333333');
+                doc.text('¡Gracias por tu pedido! Lo recibirás pronto.', 14, y);
+                y += 8;
+                doc.setFontSize(10);
+                doc.setTextColor('#7f8c8d');
+                doc.text('Sabor Express - Comida chilena a domicilio', 14, y);
+
+                const fileName = `boleta_${customerName.replace(/\s+/g, '_')}.pdf`;
+                doc.save(fileName);
+            });
+
+            updateSummary();
+        });
+    </script>
 </body>
 </html>
